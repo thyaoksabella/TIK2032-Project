@@ -1,0 +1,313 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive;
+}
+
+body {
+    background-color: #fef6ff;
+    background-image: linear-gradient(45deg, #e5a0da 25%, #da458a 25%, #fcf0fe 50%, #fef6ff 50%, #fef6ff 75%, #fcf0fe 75%, #fcf0fe 100%);
+    background-size: 40px 40px;
+    color: #5f4b8b;
+    line-height: 1.6;
+    padding: 25px;
+}
+
+/* Wrapper for content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 5px solid #ff85a2;
+}
+
+/* Header Styles */
+h1 {
+    color: #ff6b6b;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 3em;
+    text-shadow: 3px 3px 0 #ffd166;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #48bfe3;
+    margin: 25px 0 15px;
+    font-size: 2em;
+    border-bottom: 3px dotted #ffd166;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #06d6a0;
+    margin: 20px 0 10px;
+    font-size: 1.6em;
+    position: relative;
+    padding-left: 20px;
+}
+
+h3:before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #ff85a2;
+}
+
+/* Navigation */
+nav {
+    background-color: #ffcad4;
+    padding: 15px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px dashed #ff85a2;
+}
+
+nav a {
+    color: #5f4b8b;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 0 5px;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s;
+    background-color: #fff0f3;
+    display: inline-block;
+    border: 2px solid #ff85a2;
+}
+
+nav a:hover {
+    background-color: #ff85a2;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Sections */
+section, article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 15px solid #ffd166;
+    position: relative;
+}
+
+section:after, article:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #524a6b;
+}
+
+/* Images in Gallery */
+#gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+img {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    object-fit: cover;
+    height: 200px;
+    border: 5px solid white;
+}
+
+img:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #ff85a2;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #e0fdff;
+    border-left-color: #48bfe3;
+}
+
+#contact p {
+    margin: 15px 0;
+    font-size: 1.2em;
+    position: relative;
+    padding-left: 30px;
+}
+
+#contact p:before {
+    position: absolute;
+    left: 0;
+    font-size: 1.3em;
+}
+
+#contact p:nth-child(2):before {
+    content: "✉";
+    color: #ff85a2;
+}
+
+#contact p:nth-child(3):before {
+    content: "📱";
+    color: #48bfe3;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff85a2;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 133, 162, 0.3);
+}
+
+.btn:hover {
+    background-color: #ff6b6b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+h1 {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    #gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Homepage specific */
+.homepage-intro {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 20px 0;
+    color: #3712dd;
+    font-weight: bold;
+}
+
+/* Decorative elements */
+.cloud {
+    position: fixed;
+    width: 100px;
+    height: 50px;
+    background-color: rgba(135, 169, 231, 0.8);
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.cloud:before, .cloud:after {
+    content: '';
+    position: absolute;
+    background-color: rgba(136, 154, 231, 0.8);
+    border-radius: 50%;
+}
+
+.cloud:before {
+    width: 60px;
+    height: 60px;
+    top: -20px;
+    left: 15px;
+}
+
+.cloud:after {
+    width: 40px;
+    height: 40px;
+    top: -10px;
+    left: 50px;
+}
+
+.cloud-1 {
+    top: 10%;
+    left: 5%;
+    opacity: 0.8;
+    animation: float 8s ease-in-out infinite;
+}
+
+.cloud-2 {
+    top: 30%;
+    right: 5%;
+    opacity: 0.6;
+    animation: float 10s ease-in-out infinite;
+}
+
+.cloud-3 {
+    bottom: 10%;
+    left: 10%;
+    opacity: 0.7;
+    animation: float 12s ease-in-out infinite;
+}
+
+/* Blog specific */
+article {
+    border-left: 15px solid #06d6a0;
+}
+
+article h3 {
+    border-bottom: 3px dotted #ffd166;
+    padding-bottom: 8px;
+}
